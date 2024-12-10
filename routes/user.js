@@ -24,8 +24,6 @@ router.post("/signin", async (req, res) => {
 });
 router.post("/signup", async (req, res) => {
   const { fullName, email, password } = req.body;
-  console.log(`is user in sign Up post :${req}`);
-  console.log(password);
   await User.create({
     fullName,
     email,

@@ -27,7 +27,6 @@ app.use(express.static(path.resolve('./public')))
 
 app.get("/", async (req, res) => {
   const allBlogs = await Blog.find({});
-  console.log(`only user: ${JSON.stringify(req.user)}`);
   res.render("home", {
     user: req.user,
     blogs:allBlogs
